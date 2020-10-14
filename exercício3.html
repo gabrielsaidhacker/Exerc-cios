@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 3</title>
+
+    <style>
+        h1 {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            font-family: Arial;
+            padding: 5px;
+            margin: 25px;
+        }
+
+        #p1 {
+            float: left;
+            font-size: 20pt;
+
+        }
+
+        #p2 {
+            position: fixed;
+            float: left;
+            font-size: 20pt;
+        }
+
+        #p3 {
+            position: fixed;
+            float: left;
+            font-size: 20pt;
+
+        }
+
+        #p4 {
+            margin-left: 310px;
+            margin-top: 35px;
+            font-size: 20pt;
+            background-color: red;
+            margin-right: 48px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        #btn1 {
+            margin-top: 34px;
+            margin-left: 5px;
+        }
+
+        #btn2 {
+            margin-top: 34px;
+            margin-left: 5px;
+        }
+
+        #container {
+            border: solid blue 5px;
+            border-radius: 10px 10px 10px 10px;
+            padding: 10px;
+            margin-left: 100px;
+            margin-right: 200px;
+            background-color: burlywood;
+        }
+    </style>
+
+    <script>
+
+        function funcao1() {
+             val10 = parseFloat(prompt("Digite o primeiro número inteiro:"))
+        }
+
+        function funcao2() {
+            
+             val20 = parseFloat(prompt("Digite o segundo número inteiro:"))
+
+            if( val20 == val10){
+                pdif.innerHTML = ("Os números são iguais!")
+            }
+            else if(val10>val20){
+                pdif.innerHTML = (val10 + " é maior que " + val20)
+            }
+            else if(val20>val10){
+                pdif.innerHTML = (val20 + " é maior que " + val10)
+            }
+        }
+    </script>
+
+</head>
+
+<body style="background-color: aquamarine;">
+
+    <h1>Descubra aqui se seus dois números inteiros são iguais ou um maior que o outro</h1>
+
+    <div id="container">
+        <p id="p1">Clique no botão para inserir o primeiro número:</p> <button id="btn1">Número1</button>
+        <br />
+        <p id="p2">Clique no botão para inserir o segundo número:</p> <button id="btn2">Número2</button>
+
+        <p id="p3">O resultado aparecerá aqui:</p>
+        <p id="p4">********************</p>
+    </div>
+
+    <script>
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let pdif = document.getElementById("p4")
+        let val10
+        let val20
+        
+
+        
+        btn1.addEventListener("click", funcao1)
+        btn2.addEventListener("click", funcao2)
+    </script>
+
+</body>
+
+</html>
